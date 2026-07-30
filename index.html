@@ -1,255 +1,366 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Prajnaverse — Portfolio of Raushan Raj</title>
-<meta name="description" content="Prajnaverse — the portfolio of Raushan Raj, Web Developer. Projects, skills, and a way to get in touch.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PrajñaVerse — Raushan Raj | Software Engineer</title>
+  <meta name="description" content="Portfolio of Raushan Raj — B.Tech Computer Engineering Student at NIT Kurukshetra, Full Stack Developer, and Software Engineer.">
+  <meta name="author" content="Raushan Raj">
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Open Graph / Meta -->
+  <meta property="og:title" content="PrajñaVerse — Raushan Raj">
+  <meta property="og:description" content="Software Engineer & Full Stack Developer crafting deliberate, high-performance web systems.">
+  <meta property="og:type" content="website">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="css/style.css">
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<nav class="pv-nav" id="pvNav">
-  <div class="pv-container pv-nav-inner">
-    <a href="#top" class="pv-logo">prajna<span>verse</span></a>
-    <button class="pv-nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="pv-nav-links" id="navLinks">
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#work">Work</a></li>
-      <li><a href="#contact" class="pv-nav-cta">Contact</a></li>
-    </ul>
-  </div>
-</nav>
-
-<header class="pv-hero" id="top">
-  <canvas id="emberField"></canvas>
-
-  <svg class="pv-hero-mountains" viewBox="0 0 1200 300" preserveAspectRatio="none" aria-hidden="true">
-    <path d="M0,300 L0,190 L120,120 L240,180 L340,90 L420,160 L540,60 L640,150 L760,100 L860,190 L980,110 L1080,170 L1200,130 L1200,300 Z" fill="#0B0A0A" opacity="0.9"/>
-    <path d="M0,300 L0,230 L150,190 L280,230 L400,170 L520,220 L660,160 L780,215 L900,175 L1020,225 L1200,190 L1200,300 Z" fill="#0B0A0A"/>
-  </svg>
-
-  <div class="pv-hero-content">
-    <p class="pv-eyebrow">Portfolio — Raushan Raj</p>
-    <h1 class="pv-hero-title">
-      Prajna<span class="pv-hero-accent">verse</span>
-    </h1>
-    <div class="pv-hero-divider" aria-hidden="true"><span></span><i></i><span></span></div>
-    <p class="pv-hero-tagline">
-      I'm <strong>Raushan Raj</strong>, a Web Developer. I build software the same way
-      I try to see things — clear-eyed, deliberate, and honest about what's real.
-    </p>
-    <div class="pv-hero-actions">
-      <a href="#work" class="pv-btn pv-btn-primary">View the work</a>
-      <a href="#contact" class="pv-btn pv-btn-ghost">Say hello</a>
+  <!-- Navigation -->
+  <nav class="pv-nav" id="pvNav">
+    <div class="pv-container pv-nav-inner">
+      <a href="#top" class="pv-logo" aria-label="PrajnaVerse Home">prajna<span>verse</span></a>
+      <button class="pv-nav-toggle" id="navToggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="pv-nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact" class="pv-nav-cta">Contact</a></li>
+      </ul>
     </div>
-  </div>
-  <a href="#about" class="pv-scroll-cue" aria-label="Scroll to About">
-    <span></span>
-  </a>
-</header>
+  </nav>
 
-<main>
+  <!-- Hero Section -->
+  <header class="pv-hero" id="top">
+    <canvas id="emberField" aria-hidden="true"></canvas>
 
-  <section class="pv-section" id="about">
-    <div class="pv-container pv-about-grid">
-      <div class="pv-about-portrait">
-        <div class="pv-portrait-frame">
-          <img src="assets/portrait-placeholder.svg" alt="Portrait of Raushan Raj">
-        </div>
+    <svg class="pv-hero-mountains" viewBox="0 0 1200 300" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,300 L0,190 L120,120 L240,180 L340,90 L420,160 L540,60 L640,150 L760,100 L860,190 L980,110 L1080,170 L1200,130 L1200,300 Z" fill="#0B0A0A" opacity="0.9"/>
+      <path d="M0,300 L0,230 L150,190 L280,230 L400,170 L520,220 L660,160 L780,215 L900,175 L1020,225 L1200,190 L1200,300 Z" fill="#0B0A0A"/>
+    </svg>
+
+    <div class="pv-hero-content">
+      <div class="pv-status-badge">
+        <span class="pv-status-dot"></span> Available for Software Engineering Roles
       </div>
-      <div class="pv-about-text">
-        <p class="pv-kicker">I · About</p>
-        <h2 class="pv-section-title">The person behind the verses</h2>
-        <p>
-          I'm <strong>Raushan Raj</strong>, a Web Developer based in
-          [your city]. I like building things that are useful first and clever second —
-          software that actually gets out of people's way.
-        </p>
-        <p>
-          Outside of code, I'm into [interest one], [interest two], and [interest three].
-          <em>(Replace this paragraph with your real story — a line about how you got
-          into building things works well here.)</em>
-        </p>
-        <div class="pv-about-facts">
-          <div>
-            <span class="pv-fact-num">[X]+</span>
-            <span class="pv-fact-label">Years building</span>
-          </div>
-          <div>
-            <span class="pv-fact-num">[X]</span>
-            <span class="pv-fact-label">Projects shipped</span>
-          </div>
-          <div>
-            <span class="pv-fact-num">[X]</span>
-            <span class="pv-fact-label">Technologies</span>
-          </div>
-        </div>
-        <a href="assets/resume-placeholder.txt" class="pv-btn pv-btn-outline" download>Download résumé</a>
+      <h1 class="pv-hero-title">
+        Prajna<span class="pv-hero-accent">verse</span>
+      </h1>
+      <div class="pv-hero-divider" aria-hidden="true"><span></span><i></i><span></span></div>
+      <p class="pv-hero-tagline">
+        I'm <strong>Raushan Raj</strong>, a Computer Engineering student at <strong>NIT Kurukshetra</strong>. I engineer web applications and backend systems with discipline, clarity, and mathematical rigor.
+      </p>
+      <div class="pv-hero-actions">
+        <a href="#work" class="pv-btn pv-btn-primary">View Selected Work</a>
+        <a href="#resume" class="pv-btn pv-btn-ghost">View Resume</a>
       </div>
     </div>
-  </section>
 
-  <section class="pv-section pv-section-alt" id="skills">
-    <div class="pv-container">
-      <p class="pv-kicker">II · Skills</p>
-      <h2 class="pv-section-title">What I work with</h2>
+    <a href="#about" class="pv-scroll-cue" aria-label="Scroll down to About section">
+      <span></span>
+    </a>
+  </header>
 
-      <div class="pv-skills-grid">
-        <div class="pv-skill-group">
-          <h3>Frontend</h3>
-          <ul class="pv-tag-list">
-            <li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>Bootstrap</li><li>React</li>
-          </ul>
-        </div>
-        <div class="pv-skill-group">
-          <h3>Backend</h3>
-          <ul class="pv-tag-list">
-            <li>PHP</li><li>Django</li><li>Python</li><li>Node.js</li><li>REST APIs</li>
-          </ul>
-        </div>
-        <div class="pv-skill-group">
-          <h3>Data &amp; Infra</h3>
-          <ul class="pv-tag-list">
-            <li>MySQL</li><li>PostgreSQL</li><li>Git &amp; GitHub</li><li>Linux</li><li>Docker</li>
-          </ul>
-        </div>
-        <div class="pv-skill-group">
-          <h3>Currently learning</h3>
-          <ul class="pv-tag-list">
-            <li>[Skill A]</li><li>[Skill B]</li><li>[Skill C]</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="pv-section" id="work">
-    <div class="pv-container">
-      <p class="pv-kicker">III · Work</p>
-      <h2 class="pv-section-title">Selected verses</h2>
-      <p class="pv-section-sub">Four projects, four small chapters. Replace these with your own.</p>
-
-      <div class="pv-project-list">
-
-        <article class="pv-project">
-          <span class="pv-verse-mark">Verse I</span>
-          <div class="pv-project-body">
-            <h3>[Project One Name]</h3>
-            <p>One or two sentences on what this project does and the problem it solves for its users.</p>
-            <ul class="pv-tag-list pv-tag-list-sm">
-              <li>PHP</li><li>MySQL</li><li>Bootstrap</li>
-            </ul>
-            <div class="pv-project-links">
-              <a href="#">Live site ↗</a>
-              <a href="#">Source ↗</a>
+  <main>
+    <!-- About Section -->
+    <section class="pv-section" id="about">
+      <div class="pv-container pv-about-grid">
+        <div class="pv-about-portrait">
+          <div class="pv-portrait-frame">
+            <div class="pv-avatar-placeholder">
+              <span>RR</span>
             </div>
           </div>
-        </article>
-
-        <article class="pv-project">
-          <span class="pv-verse-mark">Verse II</span>
-          <div class="pv-project-body">
-            <h3>[Project Two Name]</h3>
-            <p>One or two sentences on what this project does and the problem it solves for its users.</p>
-            <ul class="pv-tag-list pv-tag-list-sm">
-              <li>Django</li><li>PostgreSQL</li><li>JavaScript</li>
-            </ul>
-            <div class="pv-project-links">
-              <a href="#">Live site ↗</a>
-              <a href="#">Source ↗</a>
+        </div>
+        <div class="pv-about-text">
+          <p class="pv-kicker">I · Engineering Journey</p>
+          <h2 class="pv-section-title">Rooted in fundamentals, driven by execution.</h2>
+          <p>
+            I am a final-year B.Tech Computer Engineering candidate at <strong>NIT Kurukshetra (2022–2026)</strong>. My approach to software development blends core computer science principles with practical full-stack execution.
+          </p>
+          <p>
+            Beyond standard engineering coursework, my mindset has been honed by technical market analysis and algorithmic trading—disciplines demanding strict risk management, rapid problem-solving, and continuous learning under real-world stress.
+          </p>
+          <div class="pv-about-facts">
+            <div>
+              <span class="pv-fact-num">2026</span>
+              <span class="pv-fact-label">Graduation Year</span>
+            </div>
+            <div>
+              <span class="pv-fact-num">NIT</span>
+              <span class="pv-fact-label">Kurukshetra</span>
+            </div>
+            <div>
+              <span class="pv-fact-num">100%</span>
+              <span class="pv-fact-label">Commitment to Quality</span>
             </div>
           </div>
-        </article>
-
-        <article class="pv-project">
-          <span class="pv-verse-mark">Verse III</span>
-          <div class="pv-project-body">
-            <h3>[Project Three Name]</h3>
-            <p>One or two sentences on what this project does and the problem it solves for its users.</p>
-            <ul class="pv-tag-list pv-tag-list-sm">
-              <li>JavaScript</li><li>REST API</li><li>Bootstrap</li>
-            </ul>
-            <div class="pv-project-links">
-              <a href="#">Live site ↗</a>
-              <a href="#">Source ↗</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="pv-project">
-          <span class="pv-verse-mark">Verse IV</span>
-          <div class="pv-project-body">
-            <h3>[Project Four Name]</h3>
-            <p>One or two sentences on what this project does and the problem it solves for its users.</p>
-            <ul class="pv-tag-list pv-tag-list-sm">
-              <li>Python</li><li>Django</li><li>Docker</li>
-            </ul>
-            <div class="pv-project-links">
-              <a href="#">Live site ↗</a>
-              <a href="#">Source ↗</a>
-            </div>
-          </div>
-        </article>
-
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="pv-section pv-section-alt" id="contact">
-    <div class="pv-container pv-contact-grid">
-      <div>
-        <p class="pv-kicker">IV · Contact</p>
-        <h2 class="pv-section-title">Write the next verse together</h2>
-        <p>
-          Have a project in mind, or just want to say hi? The form sends straight to my inbox.
-        </p>
-        <ul class="pv-contact-list">
-          <li><span>Email</span><a href="mailto:you@example.com">you@example.com</a></li>
-          <li><span>GitHub</span><a href="https://github.com/yourusername" target="_blank" rel="noopener">github.com/yourusername</a></li>
-          <li><span>LinkedIn</span><a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener">linkedin.com/in/yourusername</a></li>
-        </ul>
+    <!-- Skills Section -->
+    <section class="pv-section pv-section-alt" id="skills">
+      <div class="pv-container">
+        <p class="pv-kicker">II · Technical Stack</p>
+        <h2 class="pv-section-title">Capabilities &amp; Expertise</h2>
+
+        <div class="pv-skills-grid">
+          <div class="pv-skill-card">
+            <h3>Programming</h3>
+            <ul class="pv-tag-list">
+              <li>C / C++</li>
+              <li>Python</li>
+              <li>Java</li>
+              <li>JavaScript (ES6+)</li>
+            </ul>
+          </div>
+          <div class="pv-skill-card">
+            <h3>Frontend</h3>
+            <ul class="pv-tag-list">
+              <li>HTML5 / CSS3</li>
+              <li>Bootstrap 5</li>
+              <li>DOM Manipulation</li>
+              <li>Responsive Web Design</li>
+            </ul>
+          </div>
+          <div class="pv-skill-card">
+            <h3>Backend & DB</h3>
+            <ul class="pv-tag-list">
+              <li>Django</li>
+              <li>PHP</li>
+              <li>MySQL</li>
+              <li>RESTful APIs</li>
+            </ul>
+          </div>
+          <div class="pv-skill-card">
+            <h3>Core CS & Tools</h3>
+            <ul class="pv-tag-list">
+              <li>Data Structures & Algos</li>
+              <li>Git & GitHub</li>
+              <li>Linux / Bash</li>
+              <li>Technical Analysis / TradingView</li>
+            </ul>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <form class="pv-form" id="contactForm" method="POST" action="api/contact.php" novalidate>
-        <div class="pv-form-row">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" required>
+    <!-- Projects Section -->
+    <section class="pv-section" id="work">
+      <div class="pv-container">
+        <p class="pv-kicker">III · Portfolio</p>
+        <h2 class="pv-section-title">Featured Projects</h2>
+        <p class="pv-section-sub">Production-ready systems, full-stack implementations, and algorithmic tools.</p>
+
+        <div class="pv-project-list">
+          <!-- Project 1 -->
+          <article class="pv-project">
+            <span class="pv-verse-mark">Verse I</span>
+            <div class="pv-project-body">
+              <div class="pv-project-header">
+                <h3>Food Ordering Platform</h3>
+                <span class="pv-badge">Full Stack</span>
+              </div>
+              <p>
+                A dynamic food ordering system built with PHP and MySQL featuring user authentication, session management, dynamic cart updates, and structured relational schemas for efficient order processing.
+              </p>
+              <ul class="pv-tag-list-sm">
+                <li>PHP</li>
+                <li>MySQL</li>
+                <li>Bootstrap</li>
+                <li>JavaScript</li>
+              </ul>
+              <div class="pv-project-links">
+                <a href="https://github.com/theraushanrajx" target="_blank" rel="noopener">GitHub Repository ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="pv-project">
+            <span class="pv-verse-mark">Verse II</span>
+            <div class="pv-project-body">
+              <div class="pv-project-header">
+                <h3>Django Authentication & Management System</h3>
+                <span class="pv-badge">Backend</span>
+              </div>
+              <p>
+                Secure web application architecture implementing robust user signup, login, password encryption, role-based authorization, and administrative dashboard management using Python and Django.
+              </p>
+              <ul class="pv-tag-list-sm">
+                <li>Python</li>
+                <li>Django</li>
+                <li>SQLite / MySQL</li>
+                <li>HTML/CSS</li>
+              </ul>
+              <div class="pv-project-links">
+                <a href="https://github.com/theraushanrajx" target="_blank" rel="noopener">GitHub Repository ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="pv-project">
+            <span class="pv-verse-mark">Verse III</span>
+            <div class="pv-project-body">
+              <div class="pv-project-header">
+                <h3>Movie Recommendation Engine</h3>
+                <span class="pv-badge">Machine Learning</span>
+              </div>
+              <p>
+                A content-based filtering model utilizing vector similarity and Natural Language Processing (NLP) techniques to recommend personalized movie choices based on metadata and user preferences.
+              </p>
+              <ul class="pv-tag-list-sm">
+                <li>Python</li>
+                <li>Scikit-Learn</li>
+                <li>Pandas</li>
+                <li>Streamlit</li>
+              </ul>
+              <div class="pv-project-links">
+                <a href="https://github.com/theraushanrajx" target="_blank" rel="noopener">GitHub Repository ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4 (Future Focus) -->
+          <article class="pv-project">
+            <span class="pv-verse-mark">Verse IV</span>
+            <div class="pv-project-body">
+              <div class="pv-project-header">
+                <h3>Algorithmic Trading & Quantitative Engine</h3>
+                <span class="pv-badge pv-badge-upcoming">In Development</span>
+              </div>
+              <p>
+                A automated backtesting framework and risk analysis engine evaluating quantitative strategies across stock and forex historical time-series data.
+              </p>
+              <ul class="pv-tag-list-sm">
+                <li>Python</li>
+                <li>NumPy</li>
+                <li>TradingView API</li>
+                <li>REST APIs</li>
+              </ul>
+            </div>
+          </article>
         </div>
-        <div class="pv-form-row">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required>
+      </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section class="pv-section pv-section-alt" id="resume">
+      <div class="pv-container">
+        <p class="pv-kicker">IV · Qualifications</p>
+        <h2 class="pv-section-title">Resume & Background</h2>
+        
+        <div class="pv-resume-box">
+          <div class="pv-resume-header">
+            <div>
+              <h3>Raushan Raj</h3>
+              <p>B.Tech Computer Engineering | NIT Kurukshetra (2022–2026)</p>
+            </div>
+            <div class="pv-resume-actions">
+              <a href="mailto:theraushanrajx@gmail.com" class="pv-btn pv-btn-primary">Request Full Resume</a>
+            </div>
+          </div>
+          
+          <div class="pv-resume-grid">
+            <div class="pv-resume-col">
+              <h4>Experience & Leadership</h4>
+              <div class="pv-timeline-item">
+                <h5>Independent Trader — Stocks, Crypto & Forex</h5>
+                <span class="pv-timeline-date">Jan 2023 – Present</span>
+                <p>Applied technical analysis, price action strategies, and quantitative risk management principles across financial markets.</p>
+              </div>
+              <div class="pv-timeline-item">
+                <h5>Team Leader – Sales</h5>
+                <span class="pv-timeline-date">June 2026 – July 2026</span>
+                <p>Led a specialized sales team, streamlined client interactions, and established structured lead-tracking workflows.</p>
+              </div>
+            </div>
+
+            <div class="pv-resume-col">
+              <h4>Education & Core Strengths</h4>
+              <div class="pv-timeline-item">
+                <h5>NIT Kurukshetra</h5>
+                <span class="pv-timeline-date">2022 – 2026</span>
+                <p>B.Tech in Computer Engineering. Solid foundation in Operating Systems, DBMS, OOPs, and Computer Networks.</p>
+              </div>
+              <div class="pv-timeline-item">
+                <h5>Soft Skills & Languages</h5>
+                <p>Analytical Problem Solving, Fast Learner, Systems Thinking. Fluent in English, Hindi, and Maithili.</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="pv-form-row">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="pv-section" id="contact">
+      <div class="pv-container pv-contact-grid">
+        <div>
+          <p class="pv-kicker">V · Get In Touch</p>
+          <h2 class="pv-section-title">Let's build something extraordinary.</h2>
+          <p>
+            Currently seeking Software Engineer and Full Stack Developer roles. Feel free to reach out directly via email or connect on social platforms.
+          </p>
+          <ul class="pv-contact-list">
+            <li>
+              <span>Email</span>
+              <a href="mailto:theraushanrajx@gmail.com">theraushanrajx@gmail.com</a>
+            </li>
+            <li>
+              <span>LinkedIn</span>
+              <a href="https://www.linkedin.com/in/raushanraj02" target="_blank" rel="noopener">linkedin.com/in/raushanraj02</a>
+            </li>
+            <li>
+              <span>GitHub</span>
+              <a href="https://github.com/theraushanrajx" target="_blank" rel="noopener">github.com/theraushanrajx</a>
+            </li>
+            <li>
+              <span>Location</span>
+              <span class="pv-location-text">Delhi / Kurukshetra, India</span>
+            </li>
+          </ul>
         </div>
-        <input type="text" name="website" class="pv-honeypot" tabindex="-1" autocomplete="off">
-        <button type="submit" class="pv-btn pv-btn-primary" id="formSubmit">Send message</button>
-        <p class="pv-form-status" id="formStatus" role="status" aria-live="polite"></p>
-      </form>
+
+        <form class="pv-form" id="contactForm" action="https://formspree.io/f/xbjnqgky" method="POST" novalidate>
+          <div class="pv-form-row">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="John Doe" required>
+          </div>
+          <div class="pv-form-row">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="john@example.com" required>
+          </div>
+          <div class="pv-form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="Hello Raushan, I'd like to discuss an opportunity..." required></textarea>
+          </div>
+          <input type="text" name="_gotcha" class="pv-honeypot" tabindex="-1" autocomplete="off">
+          <button type="submit" class="pv-btn pv-btn-primary" id="formSubmit">Send Message</button>
+          <p class="pv-form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="pv-footer">
+    <div class="pv-container pv-footer-inner">
+      <span>© <span id="year"></span> Raushan Raj. All rights reserved.</span>
+      <a href="#top">Back to top ↑</a>
     </div>
-  </section>
+  </footer>
 
-</main>
-
-<footer class="pv-footer">
-  <div class="pv-container pv-footer-inner">
-    <span>© <span id="year"></span> Raushan Raj. Built as Prajnaverse.</span>
-    <a href="#top">Back to top ↑</a>
-  </div>
-</footer>
-
-<script src="js/script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
