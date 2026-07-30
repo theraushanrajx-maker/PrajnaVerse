@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="600" viewBox="0 0 500 600">
+  <rect width="500" height="600" fill="#1E1A12"/>
+  <circle cx="250" cy="230" r="90" fill="#2B2416"/>
+  <path d="M100 560 C100 420 400 420 400 560 Z" fill="#2B2416"/>
+  <text x="250" y="590" text-anchor="middle" font-family="monospace" font-size="14" fill="#A69C8C">replace with your photo</text>
+</svg>

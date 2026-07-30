@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prajnaverse — Portfolio of Raushan Raj</title>
+<meta name="description" content="Prajnaverse — the portfolio of Raushan Raj, Web Developer. Projects, skills, and a way to get in touch.">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="pv-nav" id="pvNav">
+  <div class="pv-container pv-nav-inner">
+    <a href="#top" class="pv-logo">prajna<span>verse</span></a>
+    <button class="pv-nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="pv-nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#contact" class="pv-nav-cta">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="pv-hero" id="top">
+  <canvas id="emberField"></canvas>
+
+  <svg class="pv-hero-mountains" viewBox="0 0 1200 300" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,300 L0,190 L120,120 L240,180 L340,90 L420,160 L540,60 L640,150 L760,100 L860,190 L980,110 L1080,170 L1200,130 L1200,300 Z" fill="#0B0A0A" opacity="0.9"/>
+    <path d="M0,300 L0,230 L150,190 L280,230 L400,170 L520,220 L660,160 L780,215 L900,175 L1020,225 L1200,190 L1200,300 Z" fill="#0B0A0A"/>
+  </svg>
+
+  <div class="pv-hero-content">
+    <p class="pv-eyebrow">Portfolio — Raushan Raj</p>
+    <h1 class="pv-hero-title">
+      Prajna<span class="pv-hero-accent">verse</span>
+    </h1>
+    <div class="pv-hero-divider" aria-hidden="true"><span></span><i></i><span></span></div>
+    <p class="pv-hero-tagline">
+      I'm <strong>Raushan Raj</strong>, a Web Developer. I build software the same way
+      I try to see things — clear-eyed, deliberate, and honest about what's real.
+    </p>
+    <div class="pv-hero-actions">
+      <a href="#work" class="pv-btn pv-btn-primary">View the work</a>
+      <a href="#contact" class="pv-btn pv-btn-ghost">Say hello</a>
+    </div>
+  </div>
+  <a href="#about" class="pv-scroll-cue" aria-label="Scroll to About">
+    <span></span>
+  </a>
+</header>
+
+<main>
+
+  <section class="pv-section" id="about">
+    <div class="pv-container pv-about-grid">
+      <div class="pv-about-portrait">
+        <div class="pv-portrait-frame">
+          <img src="assets/portrait-placeholder.svg" alt="Portrait of Raushan Raj">
+        </div>
+      </div>
+      <div class="pv-about-text">
+        <p class="pv-kicker">I · About</p>
+        <h2 class="pv-section-title">The person behind the verses</h2>
+        <p>
+          I'm <strong>Raushan Raj</strong>, a Web Developer based in
+          [your city]. I like building things that are useful first and clever second —
+          software that actually gets out of people's way.
+        </p>
+        <p>
+          Outside of code, I'm into [interest one], [interest two], and [interest three].
+          <em>(Replace this paragraph with your real story — a line about how you got
+          into building things works well here.)</em>
+        </p>
+        <div class="pv-about-facts">
+          <div>
+            <span class="pv-fact-num">[X]+</span>
+            <span class="pv-fact-label">Years building</span>
+          </div>
+          <div>
+            <span class="pv-fact-num">[X]</span>
+            <span class="pv-fact-label">Projects shipped</span>
+          </div>
+          <div>
+            <span class="pv-fact-num">[X]</span>
+            <span class="pv-fact-label">Technologies</span>
+          </div>
+        </div>
+        <a href="assets/resume-placeholder.txt" class="pv-btn pv-btn-outline" download>Download résumé</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="pv-section pv-section-alt" id="skills">
+    <div class="pv-container">
+      <p class="pv-kicker">II · Skills</p>
+      <h2 class="pv-section-title">What I work with</h2>
+
+      <div class="pv-skills-grid">
+        <div class="pv-skill-group">
+          <h3>Frontend</h3>
+          <ul class="pv-tag-list">
+            <li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>Bootstrap</li><li>React</li>
+          </ul>
+        </div>
+        <div class="pv-skill-group">
+          <h3>Backend</h3>
+          <ul class="pv-tag-list">
+            <li>PHP</li><li>Django</li><li>Python</li><li>Node.js</li><li>REST APIs</li>
+          </ul>
+        </div>
+        <div class="pv-skill-group">
+          <h3>Data &amp; Infra</h3>
+          <ul class="pv-tag-list">
+            <li>MySQL</li><li>PostgreSQL</li><li>Git &amp; GitHub</li><li>Linux</li><li>Docker</li>
+          </ul>
+        </div>
+        <div class="pv-skill-group">
+          <h3>Currently learning</h3>
+          <ul class="pv-tag-list">
+            <li>[Skill A]</li><li>[Skill B]</li><li>[Skill C]</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pv-section" id="work">
+    <div class="pv-container">
+      <p class="pv-kicker">III · Work</p>
+      <h2 class="pv-section-title">Selected verses</h2>
+      <p class="pv-section-sub">Four projects, four small chapters. Replace these with your own.</p>
+
+      <div class="pv-project-list">
+
+        <article class="pv-project">
+          <span class="pv-verse-mark">Verse I</span>
+          <div class="pv-project-body">
+            <h3>[Project One Name]</h3>
+            <p>One or two sentences on what this project does and the problem it solves for its users.</p>
+            <ul class="pv-tag-list pv-tag-list-sm">
+              <li>PHP</li><li>MySQL</li><li>Bootstrap</li>
+            </ul>
+            <div class="pv-project-links">
+              <a href="#">Live site ↗</a>
+              <a href="#">Source ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="pv-project">
+          <span class="pv-verse-mark">Verse II</span>
+          <div class="pv-project-body">
+            <h3>[Project Two Name]</h3>
+            <p>One or two sentences on what this project does and the problem it solves for its users.</p>
+            <ul class="pv-tag-list pv-tag-list-sm">
+              <li>Django</li><li>PostgreSQL</li><li>JavaScript</li>
+            </ul>
+            <div class="pv-project-links">
+              <a href="#">Live site ↗</a>
+              <a href="#">Source ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="pv-project">
+          <span class="pv-verse-mark">Verse III</span>
+          <div class="pv-project-body">
+            <h3>[Project Three Name]</h3>
+            <p>One or two sentences on what this project does and the problem it solves for its users.</p>
+            <ul class="pv-tag-list pv-tag-list-sm">
+              <li>JavaScript</li><li>REST API</li><li>Bootstrap</li>
+            </ul>
+            <div class="pv-project-links">
+              <a href="#">Live site ↗</a>
+              <a href="#">Source ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="pv-project">
+          <span class="pv-verse-mark">Verse IV</span>
+          <div class="pv-project-body">
+            <h3>[Project Four Name]</h3>
+            <p>One or two sentences on what this project does and the problem it solves for its users.</p>
+            <ul class="pv-tag-list pv-tag-list-sm">
+              <li>Python</li><li>Django</li><li>Docker</li>
+            </ul>
+            <div class="pv-project-links">
+              <a href="#">Live site ↗</a>
+              <a href="#">Source ↗</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="pv-section pv-section-alt" id="contact">
+    <div class="pv-container pv-contact-grid">
+      <div>
+        <p class="pv-kicker">IV · Contact</p>
+        <h2 class="pv-section-title">Write the next verse together</h2>
+        <p>
+          Have a project in mind, or just want to say hi? The form sends straight to my inbox.
+        </p>
+        <ul class="pv-contact-list">
+          <li><span>Email</span><a href="mailto:you@example.com">you@example.com</a></li>
+          <li><span>GitHub</span><a href="https://github.com/yourusername" target="_blank" rel="noopener">github.com/yourusername</a></li>
+          <li><span>LinkedIn</span><a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener">linkedin.com/in/yourusername</a></li>
+        </ul>
+      </div>
+
+      <form class="pv-form" id="contactForm" method="POST" action="api/contact.php" novalidate>
+        <div class="pv-form-row">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="pv-form-row">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="pv-form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <input type="text" name="website" class="pv-honeypot" tabindex="-1" autocomplete="off">
+        <button type="submit" class="pv-btn pv-btn-primary" id="formSubmit">Send message</button>
+        <p class="pv-form-status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="pv-footer">
+  <div class="pv-container pv-footer-inner">
+    <span>© <span id="year"></span> Raushan Raj. Built as Prajnaverse.</span>
+    <a href="#top">Back to top ↑</a>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+Replace this file with your real résumé (as a PDF).
+
+Update the download link in index.html to point at it, e.g.:
+assets/your-name-resume.pdf
